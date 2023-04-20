@@ -131,6 +131,10 @@ on boot
     chown bluetooth bluetooth /sys/devices/platform/msm_serial_hs.0/clock
     chmod 0660 /sys/devices/platform/msm_serial_hs.0/clock
 
+    # Enable touchpanel's offscreen gestures
+    chown system system /proc/touchpanel/aosp_gesture_enable
+    write /proc/touchpanel/aosp_gesture_enable 1
+
     chmod 0660 /dev/ttyHS2
     chown bluetooth bluetooth /dev/ttyHS2
 
